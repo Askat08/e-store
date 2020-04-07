@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "305e8f08b003b2188edb5f73c96fa928",
+    "revision": "cda2b2deb862b4bab8e1fce5763c458c",
     "url": "/Askat08/e-store/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Askat08/e-store/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "defd04f414e65a5817cc",
+    "revision": "e5b6386519f329205426",
     "url": "/Askat08/e-store/static/css/main.c8041810.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Askat08/e-store/static/js/2.aeebead1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "defd04f414e65a5817cc",
-    "url": "/Askat08/e-store/static/js/main.85c838a9.chunk.js"
+    "revision": "e5b6386519f329205426",
+    "url": "/Askat08/e-store/static/js/main.29844532.chunk.js"
   },
   {
     "revision": "40b39d518d33cff56b5e",

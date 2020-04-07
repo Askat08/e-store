@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Askat08/e-store/static/css/main.c8041810.chunk.css",
-    "main.js": "/Askat08/e-store/static/js/main.85c838a9.chunk.js",
-    "main.js.map": "/Askat08/e-store/static/js/main.85c838a9.chunk.js.map",
+    "main.js": "/Askat08/e-store/static/js/main.29844532.chunk.js",
+    "main.js.map": "/Askat08/e-store/static/js/main.29844532.chunk.js.map",
     "runtime-main.js": "/Askat08/e-store/static/js/runtime-main.e0d177e8.js",
     "runtime-main.js.map": "/Askat08/e-store/static/js/runtime-main.e0d177e8.js.map",
     "static/css/2.de424728.chunk.css": "/Askat08/e-store/static/css/2.de424728.chunk.css",
     "static/js/2.aeebead1.chunk.js": "/Askat08/e-store/static/js/2.aeebead1.chunk.js",
     "static/js/2.aeebead1.chunk.js.map": "/Askat08/e-store/static/js/2.aeebead1.chunk.js.map",
     "index.html": "/Askat08/e-store/index.html",
-    "precache-manifest.9a20d397d80f47dc1f429a27b078943b.js": "/Askat08/e-store/precache-manifest.9a20d397d80f47dc1f429a27b078943b.js",
+    "precache-manifest.7b1006813a30cf997270e5b5b74191bf.js": "/Askat08/e-store/precache-manifest.7b1006813a30cf997270e5b5b74191bf.js",
     "service-worker.js": "/Askat08/e-store/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/Askat08/e-store/static/css/2.de424728.chunk.css.map",
     "static/css/main.c8041810.chunk.css.map": "/Askat08/e-store/static/css/main.c8041810.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.de424728.chunk.css",
     "static/js/2.aeebead1.chunk.js",
     "static/css/main.c8041810.chunk.css",
-    "static/js/main.85c838a9.chunk.js"
+    "static/js/main.29844532.chunk.js"
   ]
 }
