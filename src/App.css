@@ -3,16 +3,26 @@
   --primaryColor: #2a2a72;
   --secondaryColor: #009ffd;
   --color-white: #f3f3f3;
-  --color-dark: #232528 --;
+  --color-dark: #232528;
   --color-yellow: #ffa400;
 }
 
 body {
   font-family: "Quicksand", sans-serif !important;
-  background: var(--color-white) !important;
-  color: var(--color-dark) !important;
+  background: #f3f3f3 !important;
+  color: #232528 !important;
 }
 
-.text-title {
-  color: green;
+.btn-cart {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 1rem !important;
+  color: #232528;
+  border-radius: 0 !important;
+  border: 2px solid #232528 !important;
+}
+
+.btn-cart:hover {
+  background: #232528 !important;
+  color: #f3f3f3 !important;
 }
