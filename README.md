@@ -1,8 +1,10 @@
 ### [Comics Book](https://github.com/Askat08/e-store) e-store
 
-This is small nice user-friendly e-store will help you find your favorite [marvel](https://www.marvel.com/) superhero book.
+This is small nice user-friendly application will help you find your favorite [marvel](https://www.marvel.com/) superhero book.
 
-### I built this e-store project to showcase my Frontend skills abilities.
+### I built this project to showcase my Frontend skills abilities.
+
+From what I know, I violated the DRY principle App.js component, sorry -\_-, working hard on it.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
