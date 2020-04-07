@@ -29,6 +29,7 @@ class App extends Component {
     };
   }
 
+  // Alert message when item added to cart
   flashAlert = () => {
     this.setState(
       () => {
@@ -46,6 +47,7 @@ class App extends Component {
     );
   };
 
+  // Scroll to top action
   scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
@@ -73,7 +75,14 @@ class App extends Component {
       `http://gateway.marvel.com/v1/public/comics?titleStartsWith=${this.state.searchfield}&limit=15&ts=1&apikey=0860ac3aed33051450d554be9f0d84d2&hash=c209f33ace43013413284d09f7e06b6e`
     )
       .then((res) => res.json())
-      .then((data) => this.setState({ items: data.data.results }))
+      .then((data) =>
+        this.setState(() => {
+          const newComics = data.data.results;
+          return {
+            items: newComics.concat(this.state.items),
+          };
+        })
+      )
       .catch((err) => this.setState({ isError: !this.state.isError }));
   };
 
@@ -139,9 +148,10 @@ class App extends Component {
 
   // Method handle increment count of quantity of item added to cart
   incrementCount = (id) => {
-    let comics = [...this.state.items];
+    let comics = [...this.state.cart];
     const index = comics.indexOf(this.getItembyId(id));
     const item = comics[index];
+
     if (item.count < 10) {
       item.count += 1;
       this.setState(() => {
