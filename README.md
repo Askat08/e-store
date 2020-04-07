@@ -1,6 +1,6 @@
 ### [Comics Book](https://github.com/Askat08/e-store) e-store
 
-This is small nice user-friendly application will help you find your favorite [marvel](https://www.marvel.com/) superhero book.
+This is small nice user-friendly application will help you find your favorite [marvel](https://www.marvel.com/) superhero comic book.
 
 ### I built this project to showcase my Frontend skills abilities.
 
