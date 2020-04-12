@@ -16,7 +16,7 @@ export default function Product(props) {
   const { title, path, ext, handleAddtoCart, id, price } = props;
 
   return (
-    <div className="figure col-sm-4 col-md-3 p-0 my-3 mx-3">
+    <div className="figure col-sm-4 col-md-2 p-0 my-3 mx-3">
       <img
         src={path + "." + ext}
         className="figure-img img-fluid rounded"
@@ -25,12 +25,15 @@ export default function Product(props) {
       />
 
       <button
-        className="cart-btn text-info shadow-none"
+        className="btn-cart text-info shadow-none w-100"
         onClick={() => handleAddtoCart(id)}
       >
+        <span className="mr-3">add to </span>
         <i className="fas fa-cart-plus" />
       </button>
-      <p className="figure-caption text-info d-inline ml-5 ">{`$${price}`}</p>
+      <p className="figure-caption mt-2 text-dark">
+        <strong>{`${price}` <= 0 ? "free" : `$ ${price}`}</strong>
+      </p>
       <p className="figure-footer text-dark">{title}</p>
     </div>
   );

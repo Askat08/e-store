@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 
 // Using Bootstrap
@@ -44,7 +45,7 @@ class App extends Component {
           this.setState({
             messageAlert: !this.state.messageAlert,
           });
-        }, 1500);
+        }, 700);
       }
     );
   };
@@ -279,7 +280,7 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <Router basename={process.env.PUBLIC_URL}>
         <Navbar />
         {this.state.messageAlert ? <Alert /> : null}
         <Switch>
@@ -313,7 +314,7 @@ class App extends Component {
           props={this.state.attributionHTML}
           scrollToTop={this.scrollToTop}
         />
-      </React.Fragment>
+      </Router>
     );
   }
 }
