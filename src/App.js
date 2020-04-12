@@ -76,7 +76,7 @@ class App extends Component {
   // Fetch data based on search input
   fetchData = (e) => {
     fetch(
-      `http://gateway.marvel.com/v1/public/comics?titleStartsWith=${this.state.searchfield}&limit=15&ts=1&apikey=0860ac3aed33051450d554be9f0d84d2&hash=c209f33ace43013413284d09f7e06b6e`
+      `https://gateway.marvel.com/v1/public/comics?titleStartsWith=${this.state.searchfield}&limit=15&ts=1&apikey=0860ac3aed33051450d554be9f0d84d2&hash=c209f33ace43013413284d09f7e06b6e`
     )
       .then((res) => res.json())
       .then((data) =>
