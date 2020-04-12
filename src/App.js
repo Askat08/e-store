@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 
-// Using Bootstrap 4
+// Using Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Importing Components
@@ -16,11 +16,13 @@ import Alert from "./components/Alert";
 class App extends Component {
   constructor(props) {
     super(props);
+    const filteredCart = JSON.parse(localStorage.getItem("cart-items"));
+
     this.state = {
       items: [],
       isError: false,
       searchfield: "",
-      cart: [],
+      cart: filteredCart || [],
       cartSubTotal: 0,
       cartTotal: 0,
       cartTax: 0,
@@ -55,7 +57,7 @@ class App extends Component {
   componentDidMount() {
     // Set initial state
     fetch(
-      `http://gateway.marvel.com/v1/public/comics?orderBy=modified&ts=1&apikey=0860ac3aed33051450d554be9f0d84d2&hash=c209f33ace43013413284d09f7e06b6e`
+      `https://cors-anywhere.herokuapp.com/http://gateway.marvel.com/v1/public/comics?orderBy=modified&ts=1&apikey=0860ac3aed33051450d554be9f0d84d2&hash=c209f33ace43013413284d09f7e06b6e`
     )
       .then((res) => res.json())
       .then((data) =>
@@ -66,11 +68,13 @@ class App extends Component {
         })
       )
       .catch((err) => this.setState({ isError: !this.state.isError }));
+
+    console.log(this.state.cart);
+    this.countTotalPrice();
   }
 
   // Fetch data based on search input
   fetchData = (e) => {
-    this.setState({ searchfield: e.target.value });
     fetch(
       `http://gateway.marvel.com/v1/public/comics?titleStartsWith=${this.state.searchfield}&limit=15&ts=1&apikey=0860ac3aed33051450d554be9f0d84d2&hash=c209f33ace43013413284d09f7e06b6e`
     )
@@ -94,22 +98,24 @@ class App extends Component {
   // Method handle when submit the search input value
   onSearchClick = (e) => {
     if (e.key === "Enter" || e.detail === 1) {
-      this.fetchData(e);
+      if (this.state.searchfield) {
+        this.fetchData(e);
+      }
     }
   };
 
   // Method for get Item by its ID
-  getItembyId = (id) => {
-    const comic = this.state.items.find((item) => item.id === id);
+  getItembyId = (id, arr) => {
+    const comic = arr.find((item) => item.id === id);
     return comic;
   };
 
   // Handle total price of items in cart
   countTotalPrice = () => {
-    const total = this.state.cart
-      .filter((item, index) => {
-        return this.state.cart.indexOf(item) === index;
-      })
+    const cart = [...this.state.cart];
+    // Gets total price of cart's items
+    const total = cart
+      .filter((item, index) => cart.indexOf(item) === index)
       .reduce((acc, item) => item.count * item.prices[0].price + acc, 0)
       .toFixed(2);
 
@@ -127,19 +133,24 @@ class App extends Component {
 
   // Method handle decrement count of quantity of item added to cart
   decrementCount = (id) => {
-    let comics = [...this.state.items];
-    const index = comics.indexOf(this.getItembyId(id));
+    let comics = [...this.state.cart];
+    const index = comics.indexOf(this.getItembyId(id, comics));
     const item = comics[index];
     if (item.count > 1) {
       item.count -= 1;
+
+      // filtered array with decremented item added
+      const arrayWithDecrementedItem = [
+        ...this.state.cart
+          .concat(item)
+          .filter(
+            (comic, index) =>
+              this.state.cart.concat(item).indexOf(comic) === index
+          ),
+      ];
       this.setState(() => {
         return {
-          cart: [
-            ...this.state.cart.filter(
-              (item, index) => this.state.cart.indexOf(item) === index
-            ),
-            item,
-          ],
+          cart: arrayWithDecrementedItem,
         };
       });
       this.countTotalPrice();
@@ -148,20 +159,25 @@ class App extends Component {
 
   // Method handle increment count of quantity of item added to cart
   incrementCount = (id) => {
-    let comics = [...this.state.cart];
-    const index = comics.indexOf(this.getItembyId(id));
+    let comics = this.state.cart;
+    const index = comics.indexOf(this.getItembyId(id, comics));
     const item = comics[index];
+
+    // Filtered array with incremented item added
+    const arrayWithIncrementedItem = [
+      ...this.state.cart
+        .concat(item)
+        .filter(
+          (comic, index) =>
+            this.state.cart.concat(item).indexOf(comic) === index
+        ),
+    ];
 
     if (item.count < 10) {
       item.count += 1;
       this.setState(() => {
         return {
-          cart: [
-            ...this.state.cart.filter(
-              (item, index) => this.state.cart.indexOf(item) === index
-            ),
-            item,
-          ],
+          cart: arrayWithIncrementedItem,
         };
       });
       this.countTotalPrice();
@@ -170,10 +186,15 @@ class App extends Component {
 
   // Method handle remove Item from cart
   removeItemFromCart = (id) => {
+    const cart = [...this.state.cart];
+    const removedItem = cart.filter((item) => item.id === id);
+    // setting count of removed item to 0
+    removedItem[0].count = 0;
+
     this.setState(
       () => {
         return {
-          cart: this.state.cart.filter((item) => item.id !== id),
+          cart: cart.filter((item) => item.id !== id),
         };
       },
       () => {
@@ -185,39 +206,75 @@ class App extends Component {
   // Method handle adding item to cart
   handleAddtoCart = (id) => {
     let comics = [...this.state.items];
-    const index = comics.indexOf(this.getItembyId(id));
+    const index = comics.indexOf(this.getItembyId(id, comics));
     const item = comics[index];
+    // Incrementing count of added to cart item
     if (item.count === undefined) {
       item.count = 1;
     } else if (item.count < 10) {
       item.count += 1;
     }
+
+    // const cart = [...this.state.cart];
+    // console.log(cart.includes(item));
+    // if (!this.state.cart.includes(item)) {
+    //   console.log("not exist");
+    //   cart.push(item);
+    //   // console.log(this.state.cart);
+    //   // return cart;
+    // }
+
+    const added = [
+      ...this.state.cart.concat(item).filter((v, i, a) => a.indexOf(v) === i),
+    ];
+
     this.setState(
       () => {
         return {
-          items: comics,
-          cart: [
-            ...this.state.cart.filter(
-              (item, index) => this.state.cart.indexOf(item) === index
-            ),
-            item,
-          ],
+          cart: added.filter((v, i, a) => a.indexOf(v) === i), //duplicate added after  refresh the page
         };
       },
       () => {
         this.countTotalPrice();
+
+        // Array from local storage
+        const localStorageArray =
+          JSON.parse(window.localStorage.getItem("cart-items")) || [];
+
+        // New array with no duplicates
+        const newFilteredArray = this.state.cart.reduce(
+          (acc, eachCartElem) => {
+            if (
+              localStorageArray.findIndex(
+                (eachStorageElem) => eachStorageElem.id === eachCartElem.id
+              ) === -1
+            ) {
+              acc.push(eachCartElem);
+            }
+            return acc;
+          },
+          [...localStorageArray]
+        );
+        // set items to localstorage
+        localStorage.setItem("cart-items", JSON.stringify(newFilteredArray));
       }
     );
+
     this.flashAlert();
   };
 
   // Handle resetting cart items
   handleClearCart = (e) => {
-    this.setState(() => {
-      return {
-        cart: [],
-      };
-    });
+    this.setState(
+      () => {
+        return {
+          cart: [],
+        };
+      },
+      () => {
+        localStorage.clear();
+      }
+    );
   };
 
   render() {

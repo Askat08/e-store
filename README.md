@@ -6,7 +6,7 @@ This is small nice user-friendly application will help you find your favorite [m
 
 From what I know, I think I violated the DRY principle in App.js component, sorry -\_-, I'm working hard on it.
 
-in the beginning I thought to build a simple e-commerce store then I wanted to get higher result within the other applicants. I hope I did good enough.
+In the beginning I thought to build a simple e-commerce store then I wanted to get higher result within the other applicants. I hope I did good enough. Sorry for that it took little longer than it could take. Was trying to connect with Redux and get stuck in some point so decided revert back to React State component.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
