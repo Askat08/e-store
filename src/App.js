@@ -57,7 +57,7 @@ class App extends Component {
   componentDidMount() {
     // Set initial state
     fetch(
-      `https://cors-anywhere.herokuapp.com/http://gateway.marvel.com/v1/public/comics?orderBy=modified&ts=1&apikey=0860ac3aed33051450d554be9f0d84d2&hash=c209f33ace43013413284d09f7e06b6e`
+      `https://gateway.marvel.com/v1/public/comics?orderBy=modified&ts=1&apikey=0860ac3aed33051450d554be9f0d84d2&hash=c209f33ace43013413284d09f7e06b6e`
     )
       .then((res) => res.json())
       .then((data) =>
