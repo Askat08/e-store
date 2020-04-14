@@ -5,11 +5,13 @@ export default function CartItem({ props, item }) {
   const { path, extension } = item.thumbnail;
   const price = item.prices[0].price;
   const quantity = item.count;
+  const https = Array.from(path);
+  https.splice(4, 0, "s");
   return (
     <div className="row my-2 text-capitilize text-center">
       <div className="col-10 mx-auto col-lg-2">
         <img
-          src={path + "." + extension}
+          src={https.join("") + "." + extension}
           alt={title}
           className="img-fluid"
           style={{ width: "5rem", height: "5rem" }}
