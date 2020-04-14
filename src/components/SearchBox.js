@@ -11,7 +11,7 @@ export default function SearchBox({
         className="form-control py-2 shadow-none"
         type="search"
         value={searchField}
-        placeholder="Search..."
+        placeholder="Search comic book..."
         id="example-search-input"
         onChange={onSearchChange}
         onKeyPress={onSearchClick}
