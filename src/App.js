@@ -120,7 +120,6 @@ class App extends Component {
       )
       .catch((err) => this.setState({ isError: !this.state.isError }));
 
-    console.log(this.state.cart);
     this.countTotalPrice();
   }
 

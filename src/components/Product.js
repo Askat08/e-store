@@ -10,11 +10,13 @@ const style = {
 
 export default function Product(props) {
   const { title, path, ext, handleAddtoCart, id, price } = props;
+  const pair = Array.from(path);
+  pair.splice(4, 0, "s");
 
   return (
     <div className="figure col-sm-4 col-md-2 p-0 my-3 mx-3">
       <img
-        src={path + "." + ext}
+        src={pair.join("") + "." + ext}
         className="figure-img img-fluid rounded"
         alt={title}
         style={style.img}
