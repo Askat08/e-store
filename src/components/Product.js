@@ -6,10 +6,6 @@ const style = {
       "0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
     cursor: "pointer",
   },
-  "img:hover": {
-    border: "4px red solid",
-    background: "#efefef",
-  },
 };
 
 export default function Product(props) {

@@ -10,7 +10,7 @@ export default function CartItem({ props, item }) {
       <div className="col-10 mx-auto col-lg-2">
         <img
           src={path + "." + extension}
-          alt="pic"
+          alt={title}
           className="img-fluid"
           style={{ width: "5rem", height: "5rem" }}
         />

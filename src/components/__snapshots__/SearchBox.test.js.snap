@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox component test should render app 1`] = `
+<div
+  className="input-group col-sm-9 mx-auto"
+>
+  <input
+    className="form-control py-2 shadow-none"
+    id="example-search-input"
+    placeholder="Search..."
+    type="search"
+  />
+  <span
+    className="input-group-append"
+  >
+    <button
+      className="btn btn-outline-info shadow-none"
+      type="button"
+    >
+      <i
+        className="fa fa-search"
+      />
+    </button>
+  </span>
+</div>
+`;
