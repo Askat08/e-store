@@ -29,7 +29,7 @@ const ProductList = (props) => {
         />
       );
     })
-    .slice(0, 15);
+    .slice(0, 15); // render only first 15 items
 
   // checking if items exists to render and no error
 
