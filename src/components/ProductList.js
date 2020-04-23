@@ -5,6 +5,7 @@ import SearchBox from "./SearchBox";
 const ProductList = (props) => {
   const {
     items,
+    cart,
     handleAddtoCart,
     messageAlert,
     isError,
@@ -26,6 +27,8 @@ const ProductList = (props) => {
           description={comic.description}
           handleAddtoCart={handleAddtoCart}
           messageAlert={messageAlert}
+          cart={cart}
+          items={items}
         />
       );
     })

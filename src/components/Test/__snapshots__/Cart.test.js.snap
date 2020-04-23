@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart component test shallow Cart component 1`] = `
+<div>
+  <h3
+    className="m-5 text-center"
+  >
+    Comics in cart
+  </h3>
+  <CartData />
+  <CartList
+    cart={
+      Array [
+        Object {
+          "count": 1,
+          "id": 1,
+          "prices": Array [
+            Object {
+              "price": 2.99,
+            },
+          ],
+          "title": "thor",
+        },
+        Object {
+          "count": 1,
+          "id": 2,
+          "prices": Array [
+            Object {
+              "price": 2.25,
+            },
+          ],
+          "title": "loki",
+        },
+        Object {
+          "count": 1,
+          "id": 3,
+          "prices": Array [
+            Object {
+              "price": 23.99,
+            },
+          ],
+          "title": "hulk",
+        },
+        Object {
+          "count": 1,
+          "id": 4,
+          "prices": Array [
+            Object {
+              "price": 15.19,
+            },
+          ],
+          "title": "spider-man",
+        },
+      ]
+    }
+    props={
+      Object {
+        "cart": Array [
+          Object {
+            "count": 1,
+            "id": 1,
+            "prices": Array [
+              Object {
+                "price": 2.99,
+              },
+            ],
+            "title": "thor",
+          },
+          Object {
+            "count": 1,
+            "id": 2,
+            "prices": Array [
+              Object {
+                "price": 2.25,
+              },
+            ],
+            "title": "loki",
+          },
+          Object {
+            "count": 1,
+            "id": 3,
+            "prices": Array [
+              Object {
+                "price": 23.99,
+              },
+            ],
+            "title": "hulk",
+          },
+          Object {
+            "count": 1,
+            "id": 4,
+            "prices": Array [
+              Object {
+                "price": 15.19,
+              },
+            ],
+            "title": "spider-man",
+          },
+        ],
+      }
+    }
+  />
+  <CartTotal
+    props={
+      Object {
+        "cart": Array [
+          Object {
+            "count": 1,
+            "id": 1,
+            "prices": Array [
+              Object {
+                "price": 2.99,
+              },
+            ],
+            "title": "thor",
+          },
+          Object {
+            "count": 1,
+            "id": 2,
+            "prices": Array [
+              Object {
+                "price": 2.25,
+              },
+            ],
+            "title": "loki",
+          },
+          Object {
+            "count": 1,
+            "id": 3,
+            "prices": Array [
+              Object {
+                "price": 23.99,
+              },
+            ],
+            "title": "hulk",
+          },
+          Object {
+            "count": 1,
+            "id": 4,
+            "prices": Array [
+              Object {
+                "price": 15.19,
+              },
+            ],
+            "title": "spider-man",
+          },
+        ],
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartTotal component test should render CartTotal component 1`] = `
+<Fragment>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-right text-capitilize"
+      >
+        <Link
+          to="/"
+        >
+          <button
+            className="btn btn-outline-danger text-uppercase mb-3 px-5"
+            onClick={[Function]}
+            type="button"
+          >
+            clear cart
+          </button>
+        </Link>
+        <h5>
+          <span
+            className="text-info"
+          >
+            subtotal : 
+          </span>
+          <strong>
+            $ 
+            43
+          </strong>
+        </h5>
+        <h5>
+          <span
+            className="text-info"
+          >
+            tax* : 
+          </span>
+          <strong>
+            $ 
+            23
+          </strong>
+        </h5>
+        <h5>
+          <span
+            className="text-info"
+          >
+            total : 
+          </span>
+          <strong>
+            $ 
+            13
+          </strong>
+        </h5>
+        <br />
+        <br />
+        <br />
+        <br />
+        <p>
+          *New York State Sales Tax 8.875%
+        </p>
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;

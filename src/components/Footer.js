@@ -1,7 +1,8 @@
 import React from "react";
 import "./Footer.css";
+import { scrollToTop } from "../utility/functions";
 
-export default function Footer({ props, scrollToTop }) {
+export default function Footer({ props }) {
   return (
     <div className="sticky-bottom">
       <div className="card-footer bg-dark text-light">
@@ -18,13 +19,18 @@ export default function Footer({ props, scrollToTop }) {
           ></h5>
           <h5 className="col-6 my-3 text-right">
             Coded with <i className="fas fa-laptop-code text-info"></i> by{" "}
-            <a href="https://askatb.com" className="text-danger">
+            <a
+              href="https://askatb.com"
+              className="text-danger"
+              target="_blank"
+            >
               me
             </a>
             .
           </h5>
         </div>
         <button
+          type="button"
           className="btn btn-outline-info shadow-none"
           onClick={() => scrollToTop()}
         >

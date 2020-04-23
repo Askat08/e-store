@@ -13,7 +13,7 @@ export default function SearchBox({
         value={searchField}
         placeholder="Search comic book..."
         id="example-search-input"
-        onChange={onSearchChange}
+        onChange={(e) => onSearchChange(e)}
         onKeyPress={onSearchClick}
       />
       <span className="input-group-append">

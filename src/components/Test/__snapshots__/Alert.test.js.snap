@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert component test should render Alert component 1`] = `
+<div
+  style={
+    Object {
+      "background": "lightgreen",
+      "fontSize": "2rem",
+      "opacity": "0.9",
+      "position": "fixed",
+      "right": "",
+      "textAlign": "center",
+      "top": "10px",
+      "transition": "opacity 0.1s ease-out",
+      "width": "100%",
+      "zIndex": "100",
+    }
+  }
+>
+  <h3
+    className="lead"
+  >
+    Hooray! Comic book in your cart.
+  </h3>
+</div>
+`;

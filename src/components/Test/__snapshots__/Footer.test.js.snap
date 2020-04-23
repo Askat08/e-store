@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component test should match to snapshot 1`] = `
+<div
+  className="sticky-bottom"
+>
+  <div
+    className="card-footer bg-dark text-light"
+  >
+    <div
+      className="row"
+    >
+      <h3
+        className="col-6 my-3"
+      >
+        Marvel Comic Books
+      </h3>
+      <h4
+        className="card-text my-3 col-6 text-right"
+      >
+        Get your superhero today.
+      </h4>
+    </div>
+    <div
+      className="row"
+    >
+      <h5
+        className="col-6 my-3 "
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+      />
+      <h5
+        className="col-6 my-3 text-right"
+      >
+        Coded with 
+        <i
+          className="fas fa-laptop-code text-info"
+        />
+         by
+         
+        <a
+          className="text-danger"
+          href="https://askatb.com"
+          target="_blank"
+        >
+          me
+        </a>
+        .
+      </h5>
+    </div>
+    <button
+      className="btn btn-outline-info shadow-none"
+      onClick={[Function]}
+      type="button"
+    >
+      top
+    </button>
+  </div>
+</div>
+`;

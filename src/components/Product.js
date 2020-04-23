@@ -5,7 +5,17 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 export default function Product(props) {
-  const { title, path, ext, handleAddtoCart, id, price, description } = props;
+  const {
+    title,
+    path,
+    ext,
+    handleAddtoCart,
+    id,
+    price,
+    description,
+    items,
+    cart,
+  } = props;
   // Converting image path string to array
   const https = Array.from(path);
   // adding 's' to http on image url
@@ -22,14 +32,16 @@ export default function Product(props) {
     <div className="figure col-sm-4 col-md-3 col-lg-2 p-0 my-3 mx-3">
       {" "}
       <img
-        onClick={handleShow}
+        name="product-img"
+        onClick={() => handleShow()}
         src={https.join("") + "." + ext}
         className="figure-img img-fluid rounded"
         alt={title}
       />
       <button
+        type="button"
         className="btn-cart text-info shadow-none w-100"
-        onClick={() => handleAddtoCart(id)}
+        onClick={() => handleAddtoCart(id, cart, items)}
       >
         <span className="mr-3">add to </span>
         <i className="fas fa-cart-plus" />
@@ -46,9 +58,7 @@ export default function Product(props) {
             <Col>
               <Modal.Body>
                 <img
-                  onClick={handleShow}
                   src={https.join("") + "." + ext}
-                  className=""
                   alt={title}
                   style={{ width: "100%" }}
                 />

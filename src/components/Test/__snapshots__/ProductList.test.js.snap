@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList component test should render ProductList component 1`] = `
+<ProductList
+  handleAddtoCart={[Function]}
+  isError={false}
+  items={Array []}
+  messageAlert={false}
+  onSearchChange={[Function]}
+  onSearchClick={[Function]}
+  searchfield=""
+>
+  <div
+    className="d-flex align-items-center justify-content-center"
+  >
+    <div
+      className=""
+    >
+      <SearchBox
+        onSearchChange={[Function]}
+        onSearchClick={[Function]}
+        searchField=""
+      >
+        <div
+          className="input-group col-sm-9 mx-auto"
+        >
+          <input
+            className="form-control py-2 shadow-none"
+            id="example-search-input"
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Search comic book..."
+            type="search"
+            value=""
+          />
+          <span
+            className="input-group-append"
+          >
+            <button
+              className="btn btn-outline-info shadow-none"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="fa fa-search"
+              />
+            </button>
+          </span>
+        </div>
+      </SearchBox>
+    </div>
+    <strong>
+      Loading...
+    </strong>
+    <div
+      aria-hidden="true"
+      className="spinner-border m-5"
+      role="status"
+    />
+  </div>
+</ProductList>
+`;

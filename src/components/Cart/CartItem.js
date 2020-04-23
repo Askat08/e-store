@@ -48,7 +48,7 @@ export default function CartItem({ props, item }) {
         <div
           style={{ cursor: "pointer" }}
           onClick={() => {
-            props.removeItemFromCart(id);
+            props.removeItemFromCart(id, props.cart);
           }}
         >
           <i className="fas fa-trash text-danger" />

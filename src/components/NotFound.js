@@ -1,9 +1,14 @@
 import React from "react";
+import NotFoundPic from "../404.png";
 
 export default function NotFound() {
   return (
-    <div className="m-5 text-center">
-      <h1>Page not Found</h1>
+    <div className="container-fluid p-0">
+      <img
+        className="img-fluid not-found"
+        src={NotFoundPic}
+        alt="ERROR 404: NOT FOUND"
+      />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component test should render Not Found component 1`] = `
+<div
+  className="container-fluid p-0"
+>
+  <img
+    alt="ERROR 404: NOT FOUND"
+    className="img-fluid not-found"
+    src="404.png"
+  />
+</div>
+`;

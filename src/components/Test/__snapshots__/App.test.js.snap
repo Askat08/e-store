@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App container test should render app container 1`] = `
+<App>
+  <BrowserRouter
+    basename=""
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Navbar>
+        <nav
+          className="navbar navbar-expand-sm bg-dark   navbar-dark"
+        >
+          <Link
+            to="/"
+          >
+            <LinkAnchor
+              href="/"
+              navigate={[Function]}
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                <img
+                  alt="store-bag-logo"
+                  className="navbar-brand"
+                  src="logo.svg"
+                />
+              </a>
+            </LinkAnchor>
+          </Link>
+          <ul
+            className="navbar-nav align-items-center"
+          >
+            <li
+              className="nav-item ml-5"
+            >
+              <Link
+                className="nav-link text-info"
+                to="/"
+              >
+                <LinkAnchor
+                  className="nav-link text-info"
+                  href="/"
+                  navigate={[Function]}
+                >
+                  <a
+                    className="nav-link text-info"
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    <h4>
+                      comics
+                    </h4>
+                  </a>
+                </LinkAnchor>
+              </Link>
+            </li>
+          </ul>
+          <Link
+            className="ml-auto"
+            to="/cart"
+          >
+            <LinkAnchor
+              className="ml-auto"
+              href="/cart"
+              navigate={[Function]}
+            >
+              <a
+                className="ml-auto"
+                href="/cart"
+                onClick={[Function]}
+              >
+                <button
+                  className="btn btn-info"
+                >
+                  <i
+                    className="fas fa-cart-arrow-down"
+                  />
+                               
+                  My Cart
+                </button>
+              </a>
+            </LinkAnchor>
+          </Link>
+        </nav>
+      </Navbar>
+      <Switch>
+        <Route
+          computedMatch={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          exact={true}
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          path="/"
+          render={[Function]}
+        >
+          <ProductList
+            attributionHTML=""
+            cart={Array []}
+            cartSubTotal="0.00"
+            cartTax="0.00"
+            cartTotal="0.00"
+            flashAlert={false}
+            handleAddtoCart={[Function]}
+            isError={false}
+            items={Array []}
+            onSearchChange={[Function]}
+            onSearchClick={[Function]}
+            searchfield=""
+          >
+            <div
+              className="d-flex align-items-center justify-content-center"
+            >
+              <div
+                className=""
+              >
+                <SearchBox
+                  onSearchChange={[Function]}
+                  onSearchClick={[Function]}
+                  searchField=""
+                >
+                  <div
+                    className="input-group col-sm-9 mx-auto"
+                  >
+                    <input
+                      className="form-control py-2 shadow-none"
+                      id="example-search-input"
+                      onChange={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Search comic book..."
+                      type="search"
+                      value=""
+                    />
+                    <span
+                      className="input-group-append"
+                    >
+                      <button
+                        className="btn btn-outline-info shadow-none"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <i
+                          className="fa fa-search"
+                        />
+                      </button>
+                    </span>
+                  </div>
+                </SearchBox>
+              </div>
+              <strong>
+                Loading...
+              </strong>
+              <div
+                aria-hidden="true"
+                className="spinner-border m-5"
+                role="status"
+              />
+            </div>
+          </ProductList>
+        </Route>
+      </Switch>
+      <Footer
+        props=""
+      >
+        <div
+          className="sticky-bottom"
+        >
+          <div
+            className="card-footer bg-dark text-light"
+          >
+            <div
+              className="row"
+            >
+              <h3
+                className="col-6 my-3"
+              >
+                Marvel Comic Books
+              </h3>
+              <h4
+                className="card-text my-3 col-6 text-right"
+              >
+                Get your superhero today.
+              </h4>
+            </div>
+            <div
+              className="row"
+            >
+              <h5
+                className="col-6 my-3 "
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+              <h5
+                className="col-6 my-3 text-right"
+              >
+                Coded with 
+                <i
+                  className="fas fa-laptop-code text-info"
+                />
+                 by
+                 
+                <a
+                  className="text-danger"
+                  href="https://askatb.com"
+                  target="_blank"
+                >
+                  me
+                </a>
+                .
+              </h5>
+            </div>
+            <button
+              className="btn btn-outline-info shadow-none"
+              onClick={[Function]}
+              type="button"
+            >
+              top
+            </button>
+          </div>
+        </div>
+      </Footer>
+    </Router>
+  </BrowserRouter>
+</App>
+`;

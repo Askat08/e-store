@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product component test should render Product component 1`] = `
+<div
+  className="figure col-sm-4 col-md-3 col-lg-2 p-0 my-3 mx-3"
+>
+   
+  <img
+    alt="comic"
+    className="figure-img img-fluid rounded"
+    name="product-img"
+    onClick={[Function]}
+    src="https://path/to/image.jpg"
+  />
+  <button
+    className="btn-cart text-info shadow-none w-100"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="mr-3"
+    >
+      add to 
+    </span>
+    <i
+      className="fas fa-cart-plus"
+    />
+  </button>
+  <p
+    className="figure-caption mt-2 text-dark"
+  >
+    <strong>
+      $ 12
+    </strong>
+  </p>
+  <p
+    className="figure-footer text-dark"
+  >
+    comic
+  </p>
+  <Bootstrap(Modal)
+    className="text-dark"
+    onHide={[Function]}
+    show={false}
+  >
+    <div
+      className="bg-info"
+    >
+       
+      <Row
+        noGutters={false}
+      >
+        <Col>
+          <ModalBody>
+            <img
+              alt="comic"
+              src="https://path/to/image.jpg"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            />
+          </ModalBody>
+        </Col>
+      </Row>
+      <Row
+        noGutters={false}
+      >
+         
+        <Col>
+          <ModalHeader
+            className="bg-warning"
+            closeButton={true}
+            closeLabel="Close"
+          >
+            <ModalTitle>
+              comic
+            </ModalTitle>
+          </ModalHeader>
+          <p
+            className="lead m-5 px-3"
+          >
+            <small
+              className="bg-warning"
+            >
+              Superhero comic
+            </small>
+          </p>
+        </Col>
+      </Row>
+    </div>
+  </Bootstrap(Modal)>
+</div>
+`;

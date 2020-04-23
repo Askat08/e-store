@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartEmpty component test shallow CartEmpty component 1`] = `
+<div
+  className="conainer m-5"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-10 mx-auto text-center"
+    >
+      <h1>
+        Cart is empty
+      </h1>
+    </div>
+  </div>
+</div>
+`;

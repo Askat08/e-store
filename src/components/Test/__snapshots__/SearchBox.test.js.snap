@@ -7,7 +7,8 @@ exports[`SearchBox component test should render app 1`] = `
   <input
     className="form-control py-2 shadow-none"
     id="example-search-input"
-    placeholder="Search..."
+    onChange={[Function]}
+    placeholder="Search comic book..."
     type="search"
   />
   <span
